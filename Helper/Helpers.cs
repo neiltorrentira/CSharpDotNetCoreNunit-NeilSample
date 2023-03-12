@@ -67,12 +67,12 @@ namespace DotNet_TestNeil.Helper
                 int amount = int.Parse(text, System.Globalization.NumberStyles.AllowCurrencySymbol);
                 double amountDouble = Convert.ToDouble(amount);
                 Console.WriteLine("Parsed Amount : " + amountDouble);
-                if (amountDouble >= 100.00) {
+                if (amountDouble >= value) {
                     Console.WriteLine("Test FAILED - Parsed Amount : " + amountDouble 
-                    + " is greater or equal to $100.00");
+                    + " is greater or equal to $" + value);
                 } else {
                     Console.WriteLine("Test PASSED - Parsed Amount : " + amountDouble 
-                    + " is Less than $100.00");
+                    + " is Less than $" + value);
                 }
             }
             catch (NoSuchElementException)
