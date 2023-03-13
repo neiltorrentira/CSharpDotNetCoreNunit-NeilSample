@@ -7,11 +7,15 @@ Verify .Net Core @Windows in command prompt and enter "dotnet --info":
 C:\>dotnet --info
 .NET SDK:
  Version:   7.0.201
-
 .
 .
-.
-
 .NET SDKs installed:
   7.0.201 [C:\Program Files\dotnet\sdk]
+```
+
+Change to .Net Core SDK version currently installed by changing <TargetFramework> @DotNet-TestNeil.csproj:
+```
+<TargetFramework>net5.0</TargetFramework>
+OR
+<TargetFramework>net6.0</TargetFramework>
 ```

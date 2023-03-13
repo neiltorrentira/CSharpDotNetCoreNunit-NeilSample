@@ -1,8 +1,8 @@
-using System.Threading;
-using System;
 using OpenQA.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.UI;
+using DotNet_TestNeil.Models;
+using OpenQA.Selenium.Interactions;
 
 namespace DotNet_TestNeil.Helper
 {
@@ -101,7 +101,20 @@ namespace DotNet_TestNeil.Helper
             Wait(1000);
         }
 
+        public void ClickUnder25DollarsFilter(){
+            PressPageDown();
+            Wait(500);          
+            Click(Constant.Under25Dollars);
+            PressPageUp();
+            Wait(1000);
+        }
 
+        public void PressPageDown(){
+            new Actions(Driver).SendKeys(OpenQA.Selenium.Keys.PageDown).Perform();  
+        }
+
+        public void PressPageUp(){
+            new Actions(Driver).SendKeys(OpenQA.Selenium.Keys.PageUp).Perform();  
+        }
     }
-
 }

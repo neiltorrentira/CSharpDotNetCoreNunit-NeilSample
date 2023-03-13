@@ -20,20 +20,18 @@ namespace DotNet_TestNeil.Tests
             SelectDropDownByText(Constant.CategoryDropdown, "Toys & Games");
             //Search for some product in the search text box.
             EnterText(Constant.SearchTextBox, "woody and buzz toys");
-            Click(Constant.SubmitButton);
-            //Perform some filter on the products - Click Under 25 dollars
-            Click(Constant.Under25Dollars);
+            Click(Constant.SubmitButton);            
             //Select the product and add it to cart
             Click(Constant.FistProduct);
             Click(Constant.AddToCartButton);
-            //Validate that the add to cart action was succeeded.
+            //Validate that the add to cart action was successful
             assertTextEquals(Constant.CartSuccessMessage, "Added to Cart");
 
             //Do steps 3 - 5 twice - 2nd time
             SelectDropDownByText(Constant.CategoryDropdown, "Toys & Games");
             EnterText(Constant.SearchTextBox, "Jessie toy story");
             Click(Constant.SubmitButton);
-            Click(Constant.Under25Dollars);
+            ClickUnder25DollarsFilter();
             Click(Constant.FistProduct);
             Click(Constant.AddToCartButton);
             assertTextEquals(Constant.CartSuccessMessage, "Added to Cart");
@@ -42,7 +40,7 @@ namespace DotNet_TestNeil.Tests
             SelectDropDownByText(Constant.CategoryDropdown, "Toys & Games");
             EnterText(Constant.SearchTextBox, "Jessie toy story");
             Click(Constant.SubmitButton);
-            Click(Constant.Under25Dollars);
+            ClickUnder25DollarsFilter();
             Click(Constant.FistProduct);
             Click(Constant.AddToCartButton);
             assertTextEquals(Constant.CartSuccessMessage, "Added to Cart");

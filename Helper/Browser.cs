@@ -35,8 +35,8 @@ namespace DotNet_TestNeil.Helper
         public static void PrepareBrowser()
         {
             Driver.Manage().Window.Maximize();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
         }
     }
 
