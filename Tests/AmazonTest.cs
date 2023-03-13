@@ -27,7 +27,7 @@ namespace DotNet_TestNeil.Tests
             //Validate that the add to cart action was successful
             assertTextEquals(Constant.CartSuccessMessage, "Added to Cart");
 
-            //Do steps 3 - 5 twice - 2nd time
+            //Do steps 3 - 5 twice - this is 1st time
             SelectDropDownByText(Constant.CategoryDropdown, "Toys & Games");
             EnterText(Constant.SearchTextBox, "Jessie toy story");
             Click(Constant.SubmitButton);
@@ -36,7 +36,7 @@ namespace DotNet_TestNeil.Tests
             Click(Constant.AddToCartButton);
             assertTextEquals(Constant.CartSuccessMessage, "Added to Cart");
 
-            //Do steps 3 - 5 twice - 3rd time
+            //Do steps 3 - 5 twice - this is 2nd time
             SelectDropDownByText(Constant.CategoryDropdown, "Toys & Games");
             EnterText(Constant.SearchTextBox, "Jessie toy story");
             Click(Constant.SubmitButton);
